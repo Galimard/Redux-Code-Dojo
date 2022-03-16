@@ -30,7 +30,7 @@ class Store {
 
     subscribe(callback) {
         this._callbacks.push(callback);
-        return () => this._callbacks = this._callbacks.filter(cb => cb !== callback); //удалит из массива ф обратного вызова
+        return () => this._callbacks = this._callbacks.filter(cb => cb !== callback); //удалит из массива ф обратного вызова, отписка
     }
 }
 
